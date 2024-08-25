@@ -14,7 +14,7 @@ export default function Home() {
   const [outputComments,setOutputComments] = useState(null);
   const [purify,setPurify] = useState(null);
 
-  const baseUrl = 'http://3.86.243.128/'
+  const baseUrl = 'https://3.86.243.128/'
 
   const handleImageChange = (event) => {
     console.log("File input changed");
