@@ -86,7 +86,7 @@ export default function Home() {
           // return;
         }
       } catch (error) {
-        alert('Error')
+        alert(error)
         return;
       }
     }else{
@@ -99,7 +99,7 @@ export default function Home() {
         if(response.data.status===200){
           setOutputComments(response.data.output);
         }else{
-          alert('Error')
+          // alert('Error')
         }
       } catch (error) {
         alert(error);
