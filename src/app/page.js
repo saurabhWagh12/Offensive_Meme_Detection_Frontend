@@ -14,7 +14,7 @@ export default function Home() {
   const [outputComments,setOutputComments] = useState(null);
   const [purify,setPurify] = useState(null);
 
-  const baseUrl = 'http://127.0.0.1:8000'
+  const baseUrl = 'http://3.86.243.128/'
 
   const handleImageChange = (event) => {
     console.log("File input changed");
@@ -46,7 +46,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 30000); 
+    }, 15000); 
 
     return () => clearTimeout(timer);
   }, [loading]);
@@ -82,15 +82,15 @@ export default function Home() {
           setTimeout(() => {
             setLoading(false);
           }, 4000); 
-          MakeRequest();
-          return;
+          // MakeRequest();
+          // return;
         }
       } catch (error) {
         alert('Error')
         return;
       }
     }else{
-      alert('Invalid Image!!!');
+      // alert('Invalid Image!!!');
     }
 
     if(linkInput!==""){
@@ -137,6 +137,8 @@ export default function Home() {
 
   return (
     <div className="w-screen min-h-screen bg-white text-black font-sans">
+        <div className="text-3xl font-sans font-semibold  pt-3 mb-2 text-center">Sentimental Shield</div>
+
       {(!loading)?
       <div className="flex flex-col justify-center items-center py-10">
 
@@ -162,7 +164,7 @@ export default function Home() {
         </div>
 
         <div className='flex w-screen justify-center items-center'>
-
+        {/* //Output  */}
         <div className='w-1/2 flex justify-center'>
           {(outputHS && outputHS.length > 0) ?
             outputHS.map((response, index) => (
